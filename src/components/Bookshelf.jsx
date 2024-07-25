@@ -21,12 +21,13 @@ const Bookshelf = () => {
     //Create a function named handleInputChange that will be triggered each time the user types in an input field.
     const handleInputChange = (event) => {
         setNewBook({ ...newBook, [event.target.name]: event.target.value });
-  };
-
     };
+
+    
 
     //Create a function named handleSubmit that will execute when the form is submitted.
     const handleSubmit = (event) => {
+        
         //The function should also take an event object as its argument. 
         //Begin the function by stopping the default form submission action using event.preventDefault().
         event.preventDefault();
@@ -40,6 +41,7 @@ const Bookshelf = () => {
           <div className="formDiv">
             <h3>Add a Book</h3>
             {/* Form for adding a new book */}
+
             <form onSubmit={handleSubmit}>
               <label>
                 Title:
@@ -74,7 +76,7 @@ const Bookshelf = () => {
             ))}
           </div>
         </div>
-      );
+    );
       
 };
     
